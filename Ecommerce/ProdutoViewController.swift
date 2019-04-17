@@ -10,12 +10,13 @@ import UIKit
 
 class ProdutoViewController: UIViewController {
 
-    @IBOutlet weak var vrNomeProduto: UILabel!
-    @IBOutlet weak var vrPrecoProduto: UILabel!
-    @IBOutlet weak var vrDescricaoProduto: UILabel!
-    @IBOutlet weak var vrNomeContato: UILabel!
-    @IBOutlet weak var vrTelContato: UILabel!
-    @IBOutlet weak var vrImagem: UIImageView!
+    @IBOutlet weak var vrImagemProduto: UIImageView!
+    @IBOutlet weak var vrTituloProduto: UILabel!
+    @IBOutlet weak var vrPreco: UILabel!
+    @IBOutlet weak var vrDescricao: UILabel!
+    @IBOutlet weak var vrVendedor: UILabel!
+    @IBOutlet weak var vrTelefone: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +29,9 @@ class ProdutoViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func comprarProduto(_ sender: UIButton) {
+    }
+    
     /*
     // MARK: - Navigation
 

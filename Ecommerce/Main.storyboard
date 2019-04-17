@@ -136,6 +136,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yl0-yf-O1r">
                                 <rect key="frame" x="130" y="526" width="60" height="30"/>
                                 <state key="normal" title="Comprar"/>
+                                <connections>
+                                    <action selector="comprarProduto:" destination="rko-Y3-HQL" eventType="touchUpInside" id="eea-kH-81p"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -172,6 +175,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="9a9-Xn-Y5T"/>
                     </view>
+                    <connections>
+                        <outlet property="vrDescricao" destination="qQs-DJ-OAK" id="tHH-qT-uyq"/>
+                        <outlet property="vrImagemProduto" destination="ynW-UL-etK" id="JrH-c7-U2B"/>
+                        <outlet property="vrPreco" destination="ulx-zd-SCh" id="Dsg-ZS-bDg"/>
+                        <outlet property="vrTelefone" destination="ssC-Ow-Tbp" id="em8-mN-O1w"/>
+                        <outlet property="vrTituloProduto" destination="Dc0-Bg-Zfi" id="6fO-IR-tON"/>
+                        <outlet property="vrVendedor" destination="YWo-M3-bYN" id="hgj-BZ-4BQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ss8-Md-OCh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -226,6 +237,9 @@
                                 <rect key="frame" x="30" y="292" width="37" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Foto"/>
+                                <connections>
+                                    <action selector="tirarFoto:" destination="Qwf-hI-fXg" eventType="touchUpInside" id="AaZ-CJ-8Wz"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seu contato" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="546-HI-a27">
                                 <rect key="frame" x="16" y="399" width="288" height="25.5"/>
@@ -240,6 +254,9 @@
                                     <constraint firstAttribute="height" constant="30" id="o15-Z3-o2n"/>
                                 </constraints>
                                 <state key="normal" title="Cadastrar"/>
+                                <connections>
+                                    <action selector="cadastrar:" destination="Qwf-hI-fXg" eventType="touchUpInside" id="VrE-xq-SfB"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Telefone" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="P9w-9l-ZN7">
                                 <rect key="frame" x="16" y="484.5" width="288" height="30"/>
@@ -280,6 +297,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="oTZ-lr-re8"/>
                     </view>
+                    <connections>
+                        <outlet property="vcContatoNome" destination="Mju-a4-Rkk" id="Yxr-LO-5BL"/>
+                        <outlet property="vrContatoTel" destination="P9w-9l-ZN7" id="6QL-8u-WnE"/>
+                        <outlet property="vrProdutoDescricao" destination="vn7-L4-87W" id="Sw2-PZ-UuW"/>
+                        <outlet property="vrProdutoImagem" destination="mnT-4f-NFm" id="NnV-XA-gCK"/>
+                        <outlet property="vrProdutoNome" destination="MBe-Qw-gjd" id="6RD-NY-emL"/>
+                        <outlet property="vrProdutoPreco" destination="g7U-a0-aGw" id="C5j-la-nlO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wrp-jK-hsc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
