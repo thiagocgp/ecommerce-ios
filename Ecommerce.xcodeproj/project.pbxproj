@@ -8,9 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5795020F22590F5700C871E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5795020E22590F5700C871E7 /* AppDelegate.swift */; };
-		5795021722590F5700C871E7 /* Ecommerce.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5795021522590F5700C871E7 /* Ecommerce.xcdatamodeld */; };
 		5795021922590F5700C871E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5795021822590F5700C871E7 /* Assets.xcassets */; };
-		5795021C22590F5700C871E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5795021A22590F5700C871E7 /* LaunchScreen.storyboard */; };
 		57950224225919E200C871E7 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57950223225919E200C871E7 /* TableViewCell.swift */; };
 		5795022622591CB800C871E7 /* ProdutoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5795022522591CB800C871E7 /* ProdutoViewController.swift */; };
 		57A9B0CA2259259200C6BCA9 /* CadastroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A9B0C92259259200C6BCA9 /* CadastroViewController.swift */; };
@@ -21,9 +19,7 @@
 /* Begin PBXFileReference section */
 		5795020B22590F5700C871E7 /* Ecommerce.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ecommerce.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5795020E22590F5700C871E7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5795021622590F5700C871E7 /* Ecommerce.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Ecommerce.xcdatamodel; sourceTree = "<group>"; };
 		5795021822590F5700C871E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		5795021B22590F5700C871E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5795021D22590F5700C871E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		57950223225919E200C871E7 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		5795022522591CB800C871E7 /* ProdutoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProdutoViewController.swift; sourceTree = "<group>"; };
@@ -64,9 +60,7 @@
 			children = (
 				5795020E22590F5700C871E7 /* AppDelegate.swift */,
 				5795021822590F5700C871E7 /* Assets.xcassets */,
-				5795021A22590F5700C871E7 /* LaunchScreen.storyboard */,
 				5795021D22590F5700C871E7 /* Info.plist */,
-				5795021522590F5700C871E7 /* Ecommerce.xcdatamodeld */,
 				57950223225919E200C871E7 /* TableViewCell.swift */,
 				5795022522591CB800C871E7 /* ProdutoViewController.swift */,
 				57A9B0C92259259200C6BCA9 /* CadastroViewController.swift */,
@@ -135,7 +129,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5795021C22590F5700C871E7 /* LaunchScreen.storyboard in Resources */,
 				5795021922590F5700C871E7 /* Assets.xcassets in Resources */,
 				AF3A39FE225DB14000145EE0 /* Main.storyboard in Resources */,
 			);
@@ -150,7 +143,6 @@
 			files = (
 				5795022622591CB800C871E7 /* ProdutoViewController.swift in Sources */,
 				57A9B0CA2259259200C6BCA9 /* CadastroViewController.swift in Sources */,
-				5795021722590F5700C871E7 /* Ecommerce.xcdatamodeld in Sources */,
 				57950224225919E200C871E7 /* TableViewCell.swift in Sources */,
 				AF3A3A02225DB44600145EE0 /* TableViewController.swift in Sources */,
 				5795020F22590F5700C871E7 /* AppDelegate.swift in Sources */,
@@ -158,17 +150,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		5795021A22590F5700C871E7 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5795021B22590F5700C871E7 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		5795021E22590F5700C871E7 /* Debug */ = {
@@ -328,19 +309,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		5795021522590F5700C871E7 /* Ecommerce.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				5795021622590F5700C871E7 /* Ecommerce.xcdatamodel */,
-			);
-			currentVersion = 5795021622590F5700C871E7 /* Ecommerce.xcdatamodel */;
-			path = Ecommerce.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 5795020322590F5700C871E7 /* Project object */;
 }
