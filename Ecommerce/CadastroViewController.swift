@@ -17,7 +17,10 @@ class CadastroViewController: UIViewController {
     @IBOutlet weak var vcContatoNome: UITextField!
     @IBOutlet weak var vrContatoTel: UITextField!
     
+    var imagePicker = UIImagePickerController()
+    
     override func viewDidLoad() {
+        imagePicker.delegate = self
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
@@ -29,6 +32,9 @@ class CadastroViewController: UIViewController {
     }
     
     @IBAction func tirarFoto(_ sender: UIButton) {
+        imagePicker.sourceType = .photoLibrary
+        imagePicker.allowsEditing = true
+        present(imagePicker, animated: true, completion: nil)
     }
     
     @IBAction func cadastrar(_ sender: UIButton) {
@@ -44,4 +50,13 @@ class CadastroViewController: UIViewController {
     }
     */
 
+}
+
+extension CadastroViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            vrProdutoImagem.image = image
+        }
+        dismiss(animated: true, completion: nil)
+    }
 }
