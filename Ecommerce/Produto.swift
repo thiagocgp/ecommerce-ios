@@ -8,11 +8,11 @@
 
 import UIKit
 
-struct Produto {
-    var produtoNome: String
-    var produtoDescricao: String
-    var produtoPreco: String
-    var produtoImagem: String
-    var contatoNome: String
-    var contatoTel: String
+class Produto: NSObject {
+    var produtoNome: String = ""
+    var produtoDescricao: String = ""
+    var produtoPreco: String = ""
+    var produtoImagem: UIImage = UIImage.init()
+    var contatoNome: String = ""
+    var contatoTel: String = ""
 }

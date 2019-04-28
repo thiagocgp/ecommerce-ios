@@ -38,6 +38,14 @@ class CadastroViewController: UIViewController {
     }
     
     @IBAction func cadastrar(_ sender: UIButton) {
+        let p = Produto()
+        p.produtoNome = vrProdutoNome.text!
+        p.produtoDescricao = vrProdutoDescricao.text!
+        p.produtoPreco = vrProdutoPreco.text!
+        p.produtoImagem = vrProdutoImagem.image!
+        p.contatoNome = vcContatoNome.text!
+        p.contatoTel = vrContatoTel.text!
+        self.dismiss(animated: true, completion: nil)
     }
     
     /*

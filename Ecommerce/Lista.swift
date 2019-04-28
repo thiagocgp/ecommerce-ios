@@ -8,6 +8,6 @@
 
 import UIKit
 
-struct Lista {
-    var produtos : [Produto]
+public class Lista : NSObject {
+    var produtos: [Produto] = []
 }
