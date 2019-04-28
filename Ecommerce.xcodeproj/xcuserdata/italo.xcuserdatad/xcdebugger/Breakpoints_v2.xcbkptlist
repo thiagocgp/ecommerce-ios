@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Ecommerce/CadastroViewController.swift"
+            timestampString = "578122238.50813"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "CadastroViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Ecommerce.CadastroViewController.vrProdutoImagem.getter : Swift.Optional&lt;__C.UIImageView&gt;"
+                  moduleName = "Ecommerce"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/italo/Documents/ecommerce-ios/Ecommerce/CadastroViewController.swift"
+                  timestampString = "578091163.41415"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "86">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Ecommerce.CadastroViewController.vrProdutoImagem.setter : Swift.Optional&lt;__C.UIImageView&gt;"
+                  moduleName = "Ecommerce"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/italo/Documents/ecommerce-ios/Ecommerce/CadastroViewController.swift"
+                  timestampString = "578091163.429805"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "106">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Ecommerce.CadastroViewController.vrProdutoImagem.modify : Swift.Optional&lt;__C.UIImageView&gt;"
+                  moduleName = "Ecommerce"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/italo/Documents/ecommerce-ios/Ecommerce/CadastroViewController.swift"
+                  timestampString = "578091163.4408309"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "69">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Ecommerce.CadastroViewController.vrProdutoImagem.modify : Swift.Optional&lt;__C.UIImageView&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "Ecommerce"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/italo/Documents/ecommerce-ios/Ecommerce/CadastroViewController.swift"
+                  timestampString = "578091163.464027"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "72">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Ecommerce.CadastroViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; Ecommerce.CadastroViewController"
+                  moduleName = "Ecommerce"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/italo/Documents/ecommerce-ios/Ecommerce/CadastroViewController.swift"
+                  timestampString = "578091163.474546"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "525">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Ecommerce.CadastroViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Ecommerce.CadastroViewController&gt;"
+                  moduleName = "Ecommerce"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/italo/Documents/ecommerce-ios/Ecommerce/CadastroViewController.swift"
+                  timestampString = "578091163.484117"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "445">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

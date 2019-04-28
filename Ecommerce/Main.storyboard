@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Qwf-hI-fXg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="THA-Ab-gRV">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,6 +18,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="6vH-va-lRM">
+                            <rect key="frame" x="0.0" y="133" width="320" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Adicionar Produto"/>
+                            <connections>
+                                <segue destination="Qwf-hI-fXg" kind="show" id="Osr-JJ-79y"/>
+                            </connections>
+                        </button>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="105" id="4FI-ii-PwS" customClass="TableViewCell" customModule="Ecommerce" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="320" height="105"/>
@@ -57,6 +65,9 @@
                                         <constraint firstItem="cJ1-nW-fLp" firstAttribute="centerY" secondItem="mSX-gU-M7V" secondAttribute="centerY" id="zij-fv-AYK"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="rko-Y3-HQL" kind="show" id="xOr-Fq-7fR"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -79,62 +90,62 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ynW-UL-etK">
-                                <rect key="frame" x="20" y="40" width="280" height="210"/>
+                                <rect key="frame" x="20" y="84" width="280" height="210"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="210" id="Hx3-RS-466"/>
                                     <constraint firstAttribute="width" constant="280" id="eSg-EK-icv"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titulo do produto" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dc0-Bg-Zfi">
-                                <rect key="frame" x="16" y="265" width="288" height="24"/>
+                                <rect key="frame" x="16" y="309" width="288" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Descrição" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yUJ-MA-ShL">
-                                <rect key="frame" x="16" y="341" width="288" height="15"/>
+                                <rect key="frame" x="16" y="385" width="288" height="15"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Texto da Descrição" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qQs-DJ-OAK">
-                                <rect key="frame" x="16" y="366" width="288" height="20"/>
+                                <rect key="frame" x="16" y="410" width="288" height="20"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Texto do Nome do Vendedor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YWo-M3-bYN">
-                                <rect key="frame" x="16" y="431" width="288" height="20"/>
+                                <rect key="frame" x="16" y="475" width="288" height="20"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Preco" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ulx-zd-SCh">
-                                <rect key="frame" x="16" y="299" width="288" height="22"/>
+                                <rect key="frame" x="16" y="343" width="288" height="22"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome do Vendedor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FCU-9z-SIx">
-                                <rect key="frame" x="16" y="406" width="288" height="15"/>
+                                <rect key="frame" x="16" y="450" width="288" height="15"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Telefone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yzT-43-gUp">
-                                <rect key="frame" x="16" y="471" width="288" height="15"/>
+                                <rect key="frame" x="16" y="515" width="288" height="15"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Texto do Telefone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ssC-Ow-Tbp">
-                                <rect key="frame" x="16" y="496" width="288" height="20"/>
+                                <rect key="frame" x="16" y="540" width="288" height="20"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yl0-yf-O1r">
-                                <rect key="frame" x="130" y="526" width="60" height="30"/>
+                                <rect key="frame" x="130" y="570" width="60" height="30"/>
                                 <state key="normal" title="Comprar"/>
                                 <connections>
                                     <action selector="comprarProduto:" destination="rko-Y3-HQL" eventType="touchUpInside" id="eea-kH-81p"/>
@@ -186,55 +197,55 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ss8-Md-OCh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="907.5" y="150"/>
+            <point key="canvasLocation" x="979" y="-270"/>
         </scene>
         <!--Cadastro View Controller-->
         <scene sceneID="B32-OS-xPM">
             <objects>
-                <viewController id="Qwf-hI-fXg" customClass="CadastroViewController" customModule="Ecommerce" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="Qwf-hI-fXg" customClass="CadastroViewController" customModule="Ecommerce" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lwz-Y1-FZC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cadastre o seu produto" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W4W-KW-RfX">
-                                <rect key="frame" x="16" y="40" width="288" height="29"/>
+                                <rect key="frame" x="16" y="84" width="288" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome do produto" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MBe-Qw-gjd">
-                                <rect key="frame" x="16" y="89" width="288" height="30"/>
+                                <rect key="frame" x="16" y="133" width="288" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mju-a4-Rkk">
-                                <rect key="frame" x="16" y="439.5" width="288" height="30"/>
+                                <rect key="frame" x="16" y="483.5" width="288" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Descrição" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vn7-L4-87W">
-                                <rect key="frame" x="16" y="139" width="288" height="30"/>
+                                <rect key="frame" x="16" y="183" width="288" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Preço (R$)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g7U-a0-aGw">
-                                <rect key="frame" x="16" y="189" width="288" height="30"/>
+                                <rect key="frame" x="16" y="233" width="288" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mnT-4f-NFm">
-                                <rect key="frame" x="117" y="239" width="187" height="140"/>
+                                <rect key="frame" x="117" y="283" width="187" height="140"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="187" id="4F8-ls-BAn"/>
                                     <constraint firstAttribute="height" constant="140" id="8rF-7k-uXx"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FkE-rc-OQ3">
-                                <rect key="frame" x="30" y="292" width="37" height="34"/>
+                                <rect key="frame" x="30" y="336" width="37" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Foto"/>
                                 <connections>
@@ -242,13 +253,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seu contato" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="546-HI-a27">
-                                <rect key="frame" x="16" y="399" width="288" height="25.5"/>
+                                <rect key="frame" x="16" y="443" width="288" height="25.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1bm-qd-8Qp">
-                                <rect key="frame" x="125" y="529.5" width="70" height="30"/>
+                                <rect key="frame" x="125" y="573.5" width="70" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="70" id="Apn-R3-jAJ"/>
                                     <constraint firstAttribute="height" constant="30" id="o15-Z3-o2n"/>
@@ -259,7 +270,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Telefone" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="P9w-9l-ZN7">
-                                <rect key="frame" x="16" y="484.5" width="288" height="30"/>
+                                <rect key="frame" x="16" y="528.5" width="288" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -308,7 +319,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wrp-jK-hsc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1710" y="150"/>
+            <point key="canvasLocation" x="979" y="494"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="TjB-5l-4HV">
