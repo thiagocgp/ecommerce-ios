@@ -8,16 +8,18 @@
 
 import UIKit
 import CoreData
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var lista: Lista?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        lista = Lista()
+        FirebaseApp.configure()
+        let db = Database.database().reference()
+        db.setValue("Hello Firebase")
         return true
     }
 

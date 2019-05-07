@@ -7,11 +7,24 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class TableViewController: UITableViewController {
 
+    var ref:DatabaseReference?
+    var myList:[String] = []
+    var handle:DatabaseHandle?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        ref = Database.database().reference()
+        handle = ref?.child("list").observe(.childAdded, with: { (snapshot) in
+            if let item = snapshot.value as? String {
+                self.myList.append(item)
+                self.tableView.reloadData()
+                self.ref?.keepSynced(true)
+            }
+        })
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -24,23 +37,22 @@ class TableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 4
+        return myList.count
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        cell.textLabel?.text = myList[indexPath.row]
 
         // Configure the cell...
 
         return cell
     }
-    */
+
 
     /*
     // Override to support conditional editing of the table view.
