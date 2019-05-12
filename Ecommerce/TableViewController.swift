@@ -11,20 +11,32 @@ import FirebaseDatabase
 
 class TableViewController: UITableViewController {
 
-    var ref:DatabaseReference?
-    var myList:[String] = []
+    var ref:DatabaseReference!
+    var myList:[Produto] = []
     var handle:DatabaseHandle?
+    var nome = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         ref = Database.database().reference()
-        handle = ref?.child("Produtos").observe(.childAdded, with: { (snapshot) in
-            if let item = snapshot.value as? String {
-                self.myList.append(item)
-                self.tableView.reloadData()
-                self.ref?.keepSynced(true)
+        ref.child("Produtos").observe( .value) { snapshot in
+            self.myList = [Produto]()
+            for produtoSnapshot in snapshot.children {
+                let produto = Produto(snapshot: produtoSnapshot as! DataSnapshot)
+                self.myList.append(produto)
+                print(produto.contatoNome)
             }
-        })
+        }
+        
+//        handle = ref?.child("Produtos").observe(.childAdded, with: { (snapshot) in
+//            if let item = snapshot.value as? String {
+//                self.myList.append(item)
+//                self.tableView.reloadData()
+//                self.ref?.keepSynced(true)
+//            }
+//        })
+        
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -45,8 +57,9 @@ class TableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = myList[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "celula", for: indexPath)
+        cell.textLabel?.text = self.myList[indexPath.row].contatoNome
+        
 
         // Configure the cell...
 
