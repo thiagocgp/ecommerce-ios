@@ -12,7 +12,9 @@ import FirebaseDatabase
 
 class CadastroViewController: UIViewController {
 
-    var ref:DatabaseReference = Database.database().reference()
+  
+    var ref:DatabaseReference?
+    
     @IBOutlet weak var vrProdutoNome: UITextField!
     @IBOutlet weak var vrProdutoDescricao: UITextField!
     @IBOutlet weak var vrProdutoPreco: UITextField!
@@ -24,6 +26,7 @@ class CadastroViewController: UIViewController {
     
     override func viewDidLoad() {
         imagePicker.delegate = self
+        ref = Database.database().reference()
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
@@ -41,8 +44,26 @@ class CadastroViewController: UIViewController {
     }
     
     @IBAction func cadastrar(_ sender: UIButton) {
-        
-        self.dismiss(animated: true, completion: nil)
+        //Verifica se tem todos os objetos antes de salvar o produto
+        if(vrProdutoNome.text != "" && vrProdutoDescricao.text != "" && vrProdutoPreco.text != ""
+            && vrProdutoImagem.image != nil && vrContatoTel.text != "" && vrContatoTel.text != ""){
+            let p = Produto()
+            p.produtoNome = vrProdutoNome.text!
+            p.produtoDescricao = vrProdutoDescricao.text!
+            p.produtoPreco = vrProdutoPreco.text!
+            p.produtoImagem = vrProdutoImagem.image!
+            p.contatoNome = vcContatoNome.text!
+            p.contatoTel = vrContatoTel.text!
+            //Transformando imagem do produto em String base64 para enviar ao banco do firebase
+            let imageData:NSData = UIImagePNGRepresentation(p.produtoImagem)! as NSData
+            let strBase64 = imageData.base64EncodedString(options: .lineLength64Characters)
+            let item = ["produtoNome": p.produtoNome, "produtoDescricao": p.produtoDescricao,
+                        "produtoPreco": p.produtoPreco, "produtoImage": strBase64,
+                        "contatoNome": p.contatoNome, "contatoTel": p.contatoTel] as [String : Any]
+            self.ref?.child("Produtos").childByAutoId().setValue(item)
+        } else {
+            print("Ainda faltam dados para cadastro")
+        }
     }
     
     /*

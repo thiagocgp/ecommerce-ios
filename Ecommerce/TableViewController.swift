@@ -18,7 +18,7 @@ class TableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         ref = Database.database().reference()
-        handle = ref?.child("list").observe(.childAdded, with: { (snapshot) in
+        handle = ref?.child("Produtos").observe(.childAdded, with: { (snapshot) in
             if let item = snapshot.value as? String {
                 self.myList.append(item)
                 self.tableView.reloadData()
