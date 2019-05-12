@@ -61,6 +61,8 @@ class CadastroViewController: UIViewController {
                         "produtoPreco": p.produtoPreco, "produtoImage": strBase64,
                         "contatoNome": p.contatoNome, "contatoTel": p.contatoTel] as [String : Any]
             self.ref?.child("Produtos").childByAutoId().setValue(item)
+            print("Produto salvo com sucesso")
+            _ = navigationController?.popToRootViewController(animated: true)
         } else {
             print("Ainda faltam dados para cadastro")
         }
