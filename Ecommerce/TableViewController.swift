@@ -25,7 +25,10 @@ class TableViewController: UITableViewController {
             for produtoSnapshot in snapshot.children {
                 let produto = Produto(snapshot: produtoSnapshot as! DataSnapshot)
                 self.myList.append(produto)
-                print(produto.contatoNome)
+                print("produto nome:")
+                print(produto.produtoNome)
+                self.tableView.reloadData()
+                self.ref?.keepSynced(true)
             }
         }
         
@@ -53,15 +56,18 @@ class TableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print("número de produtos")
+        print(myList.count)
         return myList.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "celula", for: indexPath)
-        cell.textLabel?.text = self.myList[indexPath.row].contatoNome
-        
-
-        // Configure the cell...
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TableViewCell
+        let produto = myList[indexPath.row]
+        print(produto.contatoNome + " contato")
+        cell.vrNomeProduto?.text = produto.produtoNome
+        cell.vrPrecoProduto?.text = produto.produtoPreco
+        cell.vrImagemProduto?.image = produto.produtoImagem
 
         return cell
     }

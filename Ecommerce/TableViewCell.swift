@@ -10,10 +10,9 @@ import UIKit
 
 class TableViewCell: UITableViewCell {
 
-    @IBOutlet weak var vrImage: UIImageView!
-    @IBOutlet weak var vrProduto: UILabel!
-    @IBOutlet weak var vrPreco: UILabel!
-    
+    @IBOutlet weak var vrNomeProduto: UILabel!
+    @IBOutlet weak var vrImagemProduto: UIImageView!
+    @IBOutlet weak var vrPrecoProduto: UILabel!
     
     
     override func awakeFromNib() {

@@ -10,32 +10,24 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--Menu Principal-->
         <scene sceneID="yya-i5-AkZ">
             <objects>
                 <tableViewController storyboardIdentifier="root" id="THA-Ab-gRV" customClass="TableViewController" customModule="Ecommerce" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="yX5-eu-pMp">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="105" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="yX5-eu-pMp">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="6vH-va-lRM">
-                            <rect key="frame" x="0.0" y="133" width="320" height="44"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" title="Adicionar Produto"/>
-                            <connections>
-                                <segue destination="Qwf-hI-fXg" kind="show" id="Osr-JJ-79y"/>
-                            </connections>
-                        </button>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="105" id="4FI-ii-PwS" customClass="TableViewCell" customModule="Ecommerce" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="320" height="105"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="9" reuseIdentifier="cell" rowHeight="109" id="4FI-ii-PwS" customClass="TableViewCell" customModule="Ecommerce" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="320" height="109"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4FI-ii-PwS" id="mSX-gU-M7V">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="104.5"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" tableViewCell="4FI-ii-PwS" id="mSX-gU-M7V">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="108.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cJ1-nW-fLp">
-                                            <rect key="frame" x="16" y="15" width="100" height="75"/>
+                                            <rect key="frame" x="16" y="17" width="100" height="75"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="100" id="cM0-Dy-SjV"/>
                                                 <constraint firstAttribute="height" constant="75" id="f0t-Mm-KvX"/>
@@ -55,17 +47,21 @@
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="trailingMargin" secondItem="xzy-Pb-oWF" secondAttribute="trailing" id="7Gq-zv-VlY"/>
+                                        <constraint firstItem="xzy-Pb-oWF" firstAttribute="top" secondItem="mSX-gU-M7V" secondAttribute="top" constant="26" id="CSg-AT-uxU"/>
+                                        <constraint firstItem="xzy-Pb-oWF" firstAttribute="trailing" secondItem="mSX-gU-M7V" secondAttribute="trailingMargin" id="F8p-ue-6ub"/>
+                                        <constraint firstItem="cJ1-nW-fLp" firstAttribute="centerY" secondItem="mSX-gU-M7V" secondAttribute="centerY" id="I3a-1H-jET"/>
                                         <constraint firstItem="AbC-b7-cs1" firstAttribute="top" secondItem="xzy-Pb-oWF" secondAttribute="bottom" constant="20" id="PaF-yf-9bu"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="AbC-b7-cs1" secondAttribute="trailing" id="Rz1-RP-XH0"/>
                                         <constraint firstItem="AbC-b7-cs1" firstAttribute="leading" secondItem="cJ1-nW-fLp" secondAttribute="trailing" constant="10" id="Tm8-x8-3xA"/>
-                                        <constraint firstItem="cJ1-nW-fLp" firstAttribute="leading" secondItem="mSX-gU-M7V" secondAttribute="leadingMargin" id="nJl-Ct-OtU"/>
-                                        <constraint firstItem="xzy-Pb-oWF" firstAttribute="top" secondItem="mSX-gU-M7V" secondAttribute="topMargin" constant="15" id="p3v-yo-rwA"/>
+                                        <constraint firstItem="cJ1-nW-fLp" firstAttribute="leading" secondItem="mSX-gU-M7V" secondAttribute="leadingMargin" id="VC5-vf-Fq5"/>
+                                        <constraint firstItem="xzy-Pb-oWF" firstAttribute="trailing" secondItem="AbC-b7-cs1" secondAttribute="trailing" id="gtF-l1-HV7"/>
                                         <constraint firstItem="xzy-Pb-oWF" firstAttribute="leading" secondItem="cJ1-nW-fLp" secondAttribute="trailing" constant="10" id="xH6-bZ-czE"/>
-                                        <constraint firstItem="cJ1-nW-fLp" firstAttribute="centerY" secondItem="mSX-gU-M7V" secondAttribute="centerY" id="zij-fv-AYK"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                                 <connections>
+                                    <outlet property="vrImagemProduto" destination="cJ1-nW-fLp" id="dnk-yk-HPU"/>
+                                    <outlet property="vrNomeProduto" destination="xzy-Pb-oWF" id="RQD-P2-Dey"/>
+                                    <outlet property="vrPrecoProduto" destination="AbC-b7-cs1" id="Q6U-Q6-03W"/>
                                     <segue destination="rko-Y3-HQL" kind="show" id="xOr-Fq-7fR"/>
                                 </connections>
                             </tableViewCell>
@@ -75,7 +71,13 @@
                             <outlet property="delegate" destination="THA-Ab-gRV" id="mD2-wi-wOV"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="T3y-6x-X1h"/>
+                    <navigationItem key="navigationItem" title="Menu Principal" id="T3y-6x-X1h">
+                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="add" id="Ziz-gc-CMS">
+                            <connections>
+                                <segue destination="Qwf-hI-fXg" kind="show" id="5Bq-L0-MCj"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ady-Jq-Tbg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
